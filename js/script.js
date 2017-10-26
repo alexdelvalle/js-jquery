@@ -99,11 +99,30 @@ $(document).ready(function () {
         if (score < 0) {
             myPost.addClass('poop');
         }
+        // add the "hot" class if the score is greater than 20
         else if (score > 20) {
             myPost.addClass('hot');
         }
+        // add the "warm" class if the score is greater than 10
+        // (but less than 20)
         else if (score > 10) {
             myPost.addClass('warm');
         }
     } // updatePostDom()
+}); // document ready
+
+
+
+$(document).ready(function() {
+    $('.heart').click(function(){
+        // get the button that was clicked (event.currentTarget)
+        var theHeart = $(event.currentTarget);
+
+        // add the red class to it
+        theHeart.addClass('on');
+        // add the red class the hearts that come before it
+        theHeart.prevAll().addClass('on');
+        // remove the red class from the ones that come after
+        theHeart.nextAll().removeClass('on');
+    });
 }); // document ready

@@ -2,47 +2,41 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title> jQuery </title>
+    <title> Todo List </title>
 
     <!-- Bootstrap first, then your style.css -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/todo.css">
   </head>
   <body>
-    <button class="reset-size"> Reset </button>
-    <h1> jQuery </h1>
+    <div class="container">
+      <h1>Another To Do List</h1>
 
-    <button class="next-img"> Next Image </button>
-    <br>
-    <img src="https://media.giphy.com/media/3xz2BtsGiAovlaCsRG/giphy.gif">
+      <input class="task-input" type="text" placeholder="Your task here...">
+      <button class="btn btn-primary">Add Task</button>
 
-
-    <div class="post">
-        <h2> 2Pac Lives - Top 3 Reasons Why He's Alive </h2>
-
-        <p> Score: 0 </p>
-
-        <button class="upvote"> 👍🏽 Upvote </button>
-
-        <button class="downvote"> 👎🏽 Downvote </button>
+      <ul>
+        <li>
+          <span>Wear shirt that says "Life". Hand out lemons on street corner.</span>
+          <button>
+            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+          </button>
+        </li>
+        <li>
+          <span>Hire two private investigators. Get them to follow each other.</span>
+          <button>
+            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+          </button>
+        </li>
+        <li>
+          <span>Make vanilla pudding. Put in mayo jar. Eat in public.</span>
+          <button>
+            <i class="glyphicon glyphicon-trash" aria-hidden="true"></i>
+          </button>
+        </li>
+      </ul>
     </div>
-
-
-    <div class="rating">
-      <p>Rate me!</p>
-
-      <div class="hearts">
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-        <div class="heart"></div>
-      </div>
-    </div>
-
-
-
 
     <!-- jQuery first, then Bootstrap, then your script.js -->
     <script
@@ -50,6 +44,6 @@
       integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
       crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-    <script src="./js/script.js"></script>
+    <script src="./js/todo.js"></script>
   </body>
 </html>
