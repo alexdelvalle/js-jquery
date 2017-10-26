@@ -35,7 +35,7 @@ $(document).ready(function () {
         h1Size = 25;
         myH1.css('font-size', h1Size);
     });
-});
+}); // document ready
 
 
 
@@ -66,4 +66,44 @@ $(document).ready(function () {
         // Plain DOM version:
         // myImg.setAttribute('src', aquamanGifs[currentIndex]);
     });
-});
+}); // document ready
+
+
+
+$(document).ready(function () {
+    var score = 0;
+
+    $('.upvote').click(function () {
+        score += 1;
+        updatePostDom();
+    });
+
+    $('.downvote').click(function () {
+        score -= 1;
+        updatePostDom();
+    });
+
+
+    function updatePostDom () {
+        $('.post p').html('Score: ' + score);
+
+        // Plain DOM version:
+        // myP.innerHTML = 'Score: ' + score;
+
+        var myPost = $('.post');
+
+        // remove the classes "poop", "warm", and "hot"
+        myPost.removeClass('poop warm hot');
+
+        // add the "poop" class if the score is less than 0
+        if (score < 0) {
+            myPost.addClass('poop');
+        }
+        else if (score > 20) {
+            myPost.addClass('hot');
+        }
+        else if (score > 10) {
+            myPost.addClass('warm');
+        }
+    } // updatePostDom()
+}); // document ready
