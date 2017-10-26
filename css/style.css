@@ -1,0 +1,29 @@
+.post {
+    transition: 1s;
+}
+
+.hot {
+    color: crimson;
+    font-size: 50px;
+}
+.hot p::before,
+.hot p::after {
+    content: '🔥';
+}
+
+.warm {
+    color: orange;
+    font-size: 40px;
+}
+.warm p::after,
+.warm p::before {
+    content: '☀️';
+}
+
+.poop {
+    color: chocolate;
+}
+.poop p::before,
+.poop p::after {
+    content: '💩';
+}
