@@ -31,6 +31,9 @@ $(document).ready(function () {
     var speed = 20;
 
     $(document).keyup(function () {
+        // "preventDefault()" cancels the default browser behavior for this event
+        event.preventDefault();
+
         switch (event.keyCode) {
             case 65:  // "a" key
             case 37:  // left arrow

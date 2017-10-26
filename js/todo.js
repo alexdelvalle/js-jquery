@@ -1,4 +1,5 @@
 $(document).ready(function () {
+    // this click only applies to trash buttons that were there at the start
     $('.glyphicon-trash').click(function () {
         var theTrashcan = $(event.currentTarget);
 
@@ -29,6 +30,15 @@ $(document).ready(function () {
         // Plain DOM version:
         // var taskHtml = document.createElement('li');
         // taskHtml.innerHTML = '<span>'+ taskText +'</span> <button><i class="glyphicon glyphicon-trash"></i></button>';
+
+        // add the click event to this new trash button
+        // ("find()" gives me all the descendants that match the selector)
+        taskHtml.find('.glyphicon-trash').click(function () {
+            var theTrashcan = $(event.currentTarget);
+
+            // get the closest <li> ancestor and remove it
+            theTrashcan.closest('li').remove();
+        });
 
 
         // add the new <li> tag to the <ul> parent
